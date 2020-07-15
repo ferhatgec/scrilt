@@ -1,33 +1,23 @@
-# Fegeya Scrift
+# Fegeya Scrilt
 
-## Scrift is new generation shell and scripting language project.
+## Scrift's Lightweight buddy.
 
-![Scrift](docs/resource/ScriftBanner.png)
-
-[![Build Status](https://dev.azure.com/ferhatgectao/scrift-lang/_apis/build/status/FerhatGec.scrift-lang?branchName=master)](https://dev.azure.com/ferhatgectao/scrift-lang/_build/latest?definitionId=1&branchName=master)
+![Scrilt](docs/resource/ScriltBanner.png)
 
 # Features 
+- Scrift's new friend. 
 - User-friendly shell interface.
 - Color highlighter
-- Theme option (Classic, Default and more.)
 - Auto-Whitespace
 - Auto-Completer (not ended)
 - Customizable
 - Faster than other shell (e.g. Bash)
-- Integrated Own Emoji library (see [Emoji++](https://github.com/FerhatGec/emojiplusplus)) :airplane:
 - Integrated Own Color library (see [Colorized](https://github.com/FerhatGec/colorized)) :satisfied:
 - Integrated Log system (FeLog) :open_mouth:
-- Integrated Scrift based system information tool (Fetcheya) :open_mouth:
-- Integrated Scrift based Text Editor (Edifor) :open_mouth:
-- ASCII Art (with Color option) :open_mouth:
 - History 
 - Template for programming language
 - Welcome message 
-- Scripting language :open_mouth:
-- Calendar 
-- Castle (looks like Chrome's Dinosaur game) :open_mouth:
-- XOX 
-- Pong
+- Scripting language :open_mouth: 
 - Auto-clear
 - Own Interpreter.
 - Randomize String generator (rstr)
@@ -39,7 +29,7 @@
  $ make runall 
 ```
 # How to build and run in Scrift?
-## If you are already using Scrift, use the following commands (You should going to scrift-lang directory, and run)
+## If you are already using Scrift, use the following commands (You should going to scrilt directory, and run)
 
 ```
  $ fscrift make
@@ -69,7 +59,7 @@
 ## If you are using Bash or etc, use the following commands:
 
 ```
- $ sudo chsh -s /bin/scrift <username>
+ $ sudo chsh -s /bin/scrilt <username>
 ```
 
 
@@ -78,4 +68,4 @@
  $ fscrift default_git_editor
 ```
 
-###### Scrift licensed with MIT License.
+###### Fegeya Scrilt licensed with MIT License.
