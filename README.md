@@ -13,7 +13,7 @@
 - Customizable
 - Faster than other shell (e.g. Bash)
 - Integrated Own Color library (see [Colorized](https://github.com/FerhatGec/colorized)) :satisfied:
-- Integrated Log system (FeLog) :open_mouth:
+- Integrated Log system (FeLog Lightweight version) :open_mouth:
 - History 
 - Template for programming language
 - Welcome message 

@@ -29,7 +29,7 @@
 #define printhyphen printlnf("-");
 #define hyphen "-"
 
-#define SCRILT_VERSION "0.1.7"
+#define SCRILT_VERSION "0.1.7L"
 #define SCRILT_STATUS "beta-1"
 
 
