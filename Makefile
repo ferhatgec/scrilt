@@ -20,7 +20,7 @@ COMP = g++ -c
 HECOMP = g++ -c -Wall $< -std=gnu++17 -o
 
 # CLEAN
-CLEANALL = scrift
+CLEANALL = scrilt
 CLEAN = *.o
 HEADERFILE = CommandFunc.o GetNameFunction.o FileFunction.o RunFunction.o \
 Log.o History.o Template.o Configuration.o
@@ -72,10 +72,10 @@ mainc: $(SRCDIREC)Scrift.cpp
 	echo Scrilt building successfully in Bin Directory!
 
 uninstall:
-	rm -f /bin/scrift
+	rm -f /bin/scrilt
 	
 run:
-	./scrift
+	./scrilt
 clean:
 		$(CLEAN)
 

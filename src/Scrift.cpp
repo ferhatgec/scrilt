@@ -728,7 +728,6 @@ void InputFunction() {
        	return;
      } else if(main_function->_h_str == keywords.Ls) {
           	std::string input;
-          	logsystem->WriteLog("Launching ls function.. - ");
           	RemovePrintedChar(keywords.Ls.length() - 1);
         	std::cout << WBOLD_YELLOW_COLOR << "ls " << WBLACK_COLOR;
           	BOLD_BLUE_COLOR
@@ -744,7 +743,7 @@ void InputFunction() {
       	  	terminalstr->Terminal();
       	  	return;
      } else if(main_function->_h_str.find(keywords.Fr) == 0 || main_function->_h_str.find(keywords.Cd) == 0) {
-          	logsystem->WriteLog("Launching cd function.. -");
+          	std::cout << "\b" << " " << "\b";
         	std::cout << WBOLD_GREEN_COLOR << "fr " << WBLACK_COLOR;
       	  	BOLD_CYAN_COLOR
       	  	std::getline(std::cin, main_function->_h_str);
@@ -754,7 +753,6 @@ void InputFunction() {
      	  	terminalstr->Terminal();
       	  	return;
      } else if(main_function->_h_str == keywords.Clear_Settings) {
-          	logsystem->WriteLog("Calling DeleteSettingsFunction .. -  ");
      	  	RemovePrintedChar(keywords.Clear_Settings.length() - 1);
 	  	std::cout << WBOLD_RED_COLOR << "rmv" << WBOLD_YELLOW_COLOR << "settings" << WBLACK_COLOR;
 	  	if(getchar() == '\n') {
