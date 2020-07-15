@@ -4,14 +4,10 @@
 # Distributed under the terms of the MIT License.
 #
 #
-GCFLAGS=-std=c++11 -O2 -g -Wall $(shell pkg-config --cflags ncursesw)
-GLDFLAGS=$(shell pkg-config --libs ncursesw)
 
-# PATHS 
-SRCAPPSDIREC = ./Apps/
+# PATHS
 SRCLIBDIREC = ./Library/
 SRCSYNTAXDIREC = ./src/Syntax/
-GAMESDIREC = ./Games/
 SRCDIREC = ./src/
 PREFIX = /bin/
 
@@ -24,7 +20,7 @@ COMP = g++ -c
 HECOMP = g++ -c -Wall $< -std=gnu++17 -o
 
 # CLEAN
-CLEANALL = scrift /Games/Castle/castle
+CLEANALL = scrift
 CLEAN = *.o
 HEADERFILE = CommandFunc.o GetNameFunction.o FileFunction.o RunFunction.o \
 Log.o History.o Template.o Configuration.o
@@ -39,9 +35,9 @@ else
 endif
 
 
-all: conio headersfile main clean
+all: headersfile main clean
 
-allp: headersfile mainc edifor fetcheya clean 
+allp: headersfile mainc clean 
 
 removeall: uninstall cleanall
 
@@ -63,59 +59,20 @@ nall: cleanall
 headersfile: $(HEADERFILE)
 
 
-conio: $(SRCLIBDIREC)FConio.c
-	$(GCC) -c $(SRCLIBDIREC)FConio.c -o fconio.o
-
 %.o: $(SRCSYNTAXDIREC)%.cpp
 	$(GPP) $(CFLAGS) -c $< -o $@
 
 
 main: $(SRCDIREC)Scrift.cpp
-	$(GPP) $< $(HEADERFILE) -o scrift
-	echo Scrift building successfully!
+	$(GPP) $< $(HEADERFILE) -o scrilt
+	echo Scrilt building successfully!
 
 mainc: $(SRCDIREC)Scrift.cpp
-	$(GPP) $< $(HEADERFILE) -o /bin/scrift
-	echo Scrift building successfully in Bin Directory!
-
-# Edifor
-edifor:
-	$(GPP) $(SRCDIREC)Edifor.cpp -o /bin/edifor
-	echo Edifor building successfully in Bin Directory!
-
-# Castle
-castle: $(GAMESDIREC)/Castle/Castle.hpp
-	$(GPP) $(GCFLAGS) $(GAMESDIREC)/Castle/Castle.cpp -o $(PREFIX)castle $(GLDFLAGS)
-	echo Castle building successfully in Bin Directory
-
-# TicTacToe
-tictactoe: $(GAMESDIREC)/TicTacToe/TicTacToeMain.cpp
-	$(GPP) -Wall $(GAMESDIREC)/TicTacToe/TicTacToeMain.cpp $(GAMESDIREC)/TicTacToe/tictactoe.cpp -o $(PREFIX)tictactoe 
-	echo TicTacToe building successfully in Bin Directory!
-	
-# Pong	
-pong: $(GAMESDIREC)/Pong/Pong.cpp
-	$(GPP) -Wall $(GAMESDIREC)/Pong/Pong.cpp -o $(PREFIX)pong -lncurses
-	echo Pong building successfully in Bin Directory!
-
-# Calendar
-date: $(SRCAPPSDIREC)/FDate/FDate.cpp
-	$(GPP)  $(SRCAPPSDIREC)/FDate/FDate.cpp -o $(PREFIX)fdate 
-	echo FDate building successfully in Bin Directory!
-
-# Fetcheya
-fetcheya: $(SRCSYNTAXDIREC)Fetcheya.cpp
-	$(GPP) $(SRCSYNTAXDIREC)Fetcheya.cpp -o $(PREFIX)fetcheya
-	echo Fetcheya building successfully in Bin Directory!
+	$(GPP) $< $(HEADERFILE) -o /bin/scrilt
+	echo Scrilt building successfully in Bin Directory!
 
 uninstall:
 	rm -f /bin/scrift
-	rm -f /bin/edifor
-	rm -f /bin/castle
-	rm -f /src/Games/Castle/castle
-	rm -f /bin/fdate
-	rm -f /bin/pong
-	rm -f /bin/tictactoe
 	
 run:
 	./scrift

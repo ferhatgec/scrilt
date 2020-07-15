@@ -53,7 +53,7 @@ FTemplate::LangTemplate() {
 	} else if(lang == "d") {
 		fsplusplus::CreateFile(name, DLangTemplate());
 	} else {
-		fsplusplus::CreateFile(name, "Sorry, this is not available for Scrift, Try again later... Or create pull request for Template.cpp and Template.hpp\n\nhttps://github.com/FerhatGec/scrift-lang");
+		fsplusplus::CreateFile(name, "Sorry, this is not available for Scrilt, Try again later... Or create pull request for Template.cpp and Template.hpp\n\nhttps://github.com/FerhatGec/scrilt");
 	}
 }
 

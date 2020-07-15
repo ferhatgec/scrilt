@@ -28,7 +28,6 @@
 #include <Syntax/Colors.hpp>
 #include <Syntax/Settings.hpp>
 #include <vector>
-#include <Syntax/ASCIIFunction.hpp>
 
 // Library
 #include "../../Library/Colorized.hpp"
@@ -51,7 +50,6 @@ struct stat filestat;
 struct dirent *entryname;
 fchar *string;
 FRunFunction *filerunfunction = new FRunFunction();
-asciifunction *ascii = new asciifunction;
 FeLog *filelog = new FeLog();
 // FCDFUNCTION
 FCDFunction::FCDFunction() {
@@ -243,8 +241,6 @@ FCreateFileFunction::CreateSettingsFileFunction() {
     file << "felog_cleaner 100\n";
     file << "welcome_emoji :thinking_face:\n";
     file << "bg_color 12\n";
-    file << "ascii_art_color random\n";
-    file << "scrift_theme default\n";
     file.close();
     } else {
     }
@@ -265,32 +261,8 @@ FClearFileFunction::ClearSettingsFunction() {
         file << "felog_cleaner 100\n";
     	file << "welcome_emoji :thinking_face:\n";
     	file << "bg_color 12\n";
-    	file << "ascii_art_color random\n";
-    	file << "scrift_theme default\n";
     } else {
         CreateSettingsFileFunction();
-    }
-}
-
-
-void
-FCreateFileFunction::CreateASCIIFileFunction() {
-    if(ascii->InitFile() != true) {
-    file_directory_string.append(command->_file_path_cd_function);
-    file_directory_string.append(slash);
-    file_directory_string.append(".scrift_ascii");
-    command->chartostring(file_directory_string, file_directory);
-    std::ofstream file(file_directory_string, std::ios::app);
-    file << " ███████╗ ██████╗██████╗ ██╗███████╗████████╗ 	\n";
-    file << " ██╔════╝██╔════╝██╔══██╗██║██╔════╝╚══██╔══╝ 	\n";
-    file << " ███████╗██║     ██████╔╝██║█████╗     ██║	\n";   
-    file << " ╚════██║██║     ██╔══██╗██║██╔══╝     ██║	\n";   
-    file << " ███████║╚██████╗██║  ██║██║██║        ██║	\n";   
-    file << " ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝	\n";   
-    file.close();
-    }
-    else {
-        printlnf("Good luck!\n");
     }
 }
 
@@ -530,28 +502,6 @@ FReadFileFunction::ReadSettingsFunction() {
     }
 }
 
-void
-FReadFileFunction::ReadASCIIFunction() {
-    std::string line;
-    std::string path;
-    uid_t fuid = geteuid();
-    struct passwd *pass = getpwuid(fuid);
-    path.append("/home/");
-    path.append(pass->pw_name); // Your username
-    path.append("/");
-    path.append(".scrift_ascii");
-    //path.append(txt);
-    std::ifstream readfile(path);
-    if(readfile.is_open()) {
-        while (std::getline(readfile, line)) {
-            colorized::PrintWith(colorized::Colorize(BOLD, settings->ASCIIColor()).c_str(), line.c_str());
-            slashn
-        }
-        readfile.close();
-    } else {
-        printerror->PrintError("Unable to open file\n");
-    }
-}
 // FHOMEFUNCTION
 void
 fhomefunction::GetHome() {
@@ -777,7 +727,6 @@ FCDFunction::~FCDFunction() {
     delete fmain, 
     printerror,
     command,
-    ascii, 
     filelog, 
     settings;
 }

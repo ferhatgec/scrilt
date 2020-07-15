@@ -16,7 +16,7 @@ typest {
 public:
     virtual func help() {
         BOLD_GREEN_COLOR
-            printlnf("Scrift Functions && Arguments\n\n");
+            printlnf("Scrilt Functions && Arguments\n\n");
             BOLD_GREEN_COLOR
             printlnf("printlnf <arg> (e.g. : #USER, #PATH, Environment) : Shows <arg> \n");
             BOLD_RED_COLOR
@@ -53,18 +53,13 @@ public:
             "rmvhistory : Clear your Scrift History\n"
             "rmvsettings : Clear your Settings\n"
             "settings : Shows your Settings\n"
-            "fetcheya : Shows your system\n"
             "emoji : Shows your inputted emoji (e.g: :thinking_face:)\n"
             "version : Shows version and license\n"
             "now : Shows time.\n"
 	    "uptime : Shows uptime.\n"
-	    "asciiart : Shows your ASCII Art with selected color (ascii_art_color)\n"
             "template : Creates a language example. (Hello Language)\n"
-            "[If your default shell is Scrift] fdate : Shows calendar\n"
             "readtext <file> : Reads <file>\n"
-     	    "[For Scrift Developers] felog : Shows your FeLog.\n"
-            "[If your default shell is Scrift] edifor : Open Edifor\n"
-            "[If your default shell is Scrift] edifor <filename> : Open Edifor with File\n\n");
+     	    "[For Scrift && Scrilt Developers] felog : Shows your FeLog.\n\n");
             BOLD_GREEN_COLOR
             printlnf("addtext <file> : Add text in <file>\n"
             "ctxt <name> : Creates Text file\n\n");
@@ -79,10 +74,10 @@ public:
     virtual func hello() {
     	colorized::PrintWhReset(colorized::Colorize(BOLD, BLUE).c_str(), "Welcome to ");
         colorized::PrintWhReset(colorized::Colorize(BOLD, GREEN).c_str(), "Fegeya ");
-        colorized::PrintWhReset(colorized::Colorize(BOLD, LIGHT_BLUE).c_str(), "Scrift ");
+        colorized::PrintWhReset(colorized::Colorize(BOLD, LIGHT_BLUE).c_str(), "Scrilt ");
         colorized::PrintWhReset(colorized::Colorize(BOLD, LIGHT_CYAN).c_str(), "Terminal \n");
         colorized::PrintWhReset(colorized::Colorize(BOLD, GREEN).c_str(), "Fegeya ");
-	colorized::PrintWhReset(colorized::Colorize(BOLD, LIGHT_BLUE).c_str(), "Scrift ");
+	colorized::PrintWhReset(colorized::Colorize(BOLD, LIGHT_BLUE).c_str(), "Scrilt ");
 	colorized::PrintWhReset(colorized::Colorize(BOLD, YELLOW).c_str(), "licensed with ");
         colorized::PrintWhReset(colorized::Colorize(BOLD, LIGHT_GREEN).c_str(), "MIT License \n");
         colorized::PrintWhReset(colorized::Colorize(BOLD, LIGHT_MAGENTA).c_str(), "Copyright (c)");

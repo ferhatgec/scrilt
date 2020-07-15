@@ -35,7 +35,6 @@ public:
     FCreateFileFunction();
     ~FCreateFileFunction();
     bool IsExistFile(std::string);
-    void CreateASCIIFileFunction();
     void CreateScriftFile(std::string);
     void CreateFileFunctionInit(fstr);
     void CreateSettingsFileFunction();
@@ -49,7 +48,6 @@ public:
     void ReadFeLogFunctionWithoutPrint();
     void ReadHistoryFileFunction();
     void ReadSettingsFunction();
-    void ReadASCIIFunction();
     void ReadFeLogFunction();
     void ReadFileFunction(fstr);
 };
